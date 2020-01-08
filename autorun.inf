@@ -1,0 +1,10 @@
+[autorun]
+open=Launch.bat
+icon=Icon.ICO
+label=UsbDrive
+action=Run
+shell\open\command=Launch.bat
+[Content]
+MusicFiles=false
+PictureFiles=false
+VideoFiles=false
