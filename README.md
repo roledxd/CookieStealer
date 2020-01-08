@@ -14,7 +14,7 @@ Cookie Stealer for USB Drive Supports 4 browsers: `Yandex Browser`, `Chrome`, `M
 ```
 1. Clone files from repository to USB Drive (1GB Optimal capacity).
 
-2. You can change the Icon.ico, but with the ICO extension.
+2. You can change the Icon (.ico only).
 
 3. Set all files as Hidden except Launch.bat.
 
