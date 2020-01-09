@@ -23,7 +23,7 @@ Cookie Stealer for USB Drive Supports 4 browsers: `Yandex Browser`, `Chrome`, `M
 
 # Decoding:
 ```
-You can use SQLiteSpy to decode these files.
+You can use SQLiteSpy to decode the output files.
 ```
 
 # Logging:
